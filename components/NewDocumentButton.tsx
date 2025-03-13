@@ -18,7 +18,9 @@ const NewDocumentButton = () => {
   }
 
   return (
-    <Button onClick={handleCreateNewDocument}>New Document</Button>
+    <Button onClick={handleCreateNewDocument} disabled={!isPending}>
+        {isPending ? "Creating..." : "New Document"}
+    </Button>
   )
 }
 
